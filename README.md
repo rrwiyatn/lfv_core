@@ -1,10 +1,10 @@
-# Tackling Lane Following with Vehicles using Semantic Segmentation {#demo-semantic-segmentation status=beta}
+# Tackling Lane Following with Vehicles using Semantic Segmentation
 
-This is the description of the "Lane Following with Vehicles (LFV) using Semantic Segmentation" demo.
+This repository contains the package to perform Lane Following with Vehicles (LFV) using semantic segmentation.
 
 Contributor(s): Rey Reza Wiyatno and Dong Wang
 
-## Video of expected results {#demo-semantic-segmentation-expected}
+## Video of expected results
 
 <figure>
     <figcaption>This video demonstrates the expected LFV results in the simulation. Top-left: camera image. Top-right: predicted segmentation map. Bottom-left: result of line fitting using RANSAC in image space (note that we only consider the bottom 2/3 of the image). Bottom-right: visualization of the ground-projected points in Duckiebot's coordinate frame, where the color blue corresponds to the predicted follow point and other colors correspond to the segmentation classes. The segmentation classes are: (1) YELLOW = yellow lines, (2) WHITE = white lines, (3) PURPLE = red lines, (4) RED = duckiebot, (5) GREEN = static obstacles (such as duckies, cones, and barricade), and (6) BLACK = everything else. The Duckiebot drives autonomously using a pure pursuit controller, which was tuned such that the Duckiebot accelerates on straight lane, and decelerates at corners to make a hard turn. As seen in the video, the segmentation model is able to segment the images correctly and the Duckiebot stops when the other vehicle gets too close.</figcaption>
@@ -27,7 +27,7 @@ Contributor(s): Rey Reza Wiyatno and Dong Wang
 </figure>
 
 
-## How the method works {#demo-semantic-segmentation-method}
+## How the method works
 
 ### The big picture
 
