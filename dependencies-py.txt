@@ -1,1 +1,9 @@
 # LIST YOUR PYTHON PACKAGES HERE
+
+sklearn
+pygeometry
+reprep
+numpy==1.16.0
+setuptools==41.0.0
+tensorflow==1.14.0
+keras==2.2.5
