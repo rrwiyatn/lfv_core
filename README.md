@@ -51,7 +51,7 @@ Although the Duckietown simulation allows us to do domain randomization, we adde
     <img style='width:16em' src="figures/dr_samples.png"/>
 </figure>
 
-Finally, we finetuned the trained segmentation model using 230 labeled real world images. From the results we saw above, we can see how the segmentation model can indeed perform well on real world images after being finetuned. The trained models can be found in our package repository (TODO: add repo package link).
+Finally, we finetuned the trained segmentation model using 230 labeled real world images. From the results we saw above, we can see how the segmentation model can indeed perform well on real world images after being finetuned. The trained models can be found in `nodes/` directory. We also include a notebook that explains how to train the segmentation model (https://github.com/rrwiyatn/challenge-aido_LF-baseline-duckietown/blob/daffy/assets/train_segmentation_model.ipynb).
 
 This functionality is implemented as a ROS node that subscribes to the camera image topic and publishes the segmentation map as another image topic.
 
@@ -102,9 +102,17 @@ Pure pursuit controller is a geometric path following controller whose goals are
 
 * We can visualize the segmentation map, RANSAC output, and ground projection using `rqt_image_view`
 * We encourage the readers to modify adjustable parameters in `lfv_controller.py` and see how the behavior changes.
-* We also provide a notebook that explains how to train the segmentation model from scratch in `challenge-aido_LF-baseline-duckietown/assets/` (TODO: add link)
+* We also provide a notebook that explains how to train the segmentation model from scratch: https://github.com/rrwiyatn/challenge-aido_LF-baseline-duckietown/blob/daffy/assets/train_segmentation_model.ipynb
 * Contact Rey Reza Wiyatno (rey.wiyatno@umontreal.ca) if interested in the dataset we used to train our segmentation models.
 
-## Contact
+## Troubleshooting
 
-Contact Rey Reza Wiyatno (rey.wiyatno@umontreal.ca) for inquiries.
+Symptom: The movement of Duckiebot is too jerky.
+
+Resolution: Change the adjustable parameters in `lfv_controller.py`.
+
+Symptom: The Duckiebot does not response fast enough to stop hitting the other vehicle.
+
+Resolution: Reduce the velocity of the Duckiebot, or increase the closest distance allowed between Duckiebot and obstacles in `lfv_controller.py`.
+
+Contact Rey Reza Wiyatno (rey.wiyatno@umontreal.ca) for further assistance.
