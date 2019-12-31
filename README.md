@@ -102,7 +102,7 @@ Pure pursuit controller is a geometric path following controller whose goals are
 
 * We can visualize the segmentation map, RANSAC output, and ground projection using `rqt_image_view`
 * We encourage the readers to modify adjustable parameters in `lfv_controller.py` and see how the behavior changes.
-* We also provide a notebook that explains how to train the segmentation model from scratch: https://github.com/rrwiyatn/challenge-aido_LF-baseline-duckietown/blob/daffy/assets/train_segmentation_model.ipynb
+* We also provide a [notebook](https://github.com/rrwiyatn/challenge-aido_LF-baseline-duckietown/blob/daffy/assets/train_segmentation_model.ipynb) that explains how to train the segmentation model from scratch
 * Contact Rey Reza Wiyatno (rey.wiyatno@umontreal.ca) if interested in the dataset we used to train our segmentation models.
 
 ## Troubleshooting
